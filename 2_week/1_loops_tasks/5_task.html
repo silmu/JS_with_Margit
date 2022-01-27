@@ -1,0 +1,11 @@
+<script>
+  let count = 0;
+  let sum = 0;
+  while (true) {
+    let num1 = Number(prompt('Enter a number (Enter 0 to quit).'));
+    if (num1 === 0) break;
+    sum += num1;
+    count++;
+  }
+  console.log('The average is ' + sum / count);
+</script>
