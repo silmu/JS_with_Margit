@@ -1,0 +1,15 @@
+<script>
+  let sum = 0;
+  let count = 0;
+  while (true) {
+    let num = Number(prompt('Enter a number: '));
+    sum += num;
+    count++;
+    let answer = prompt('Do you want to continue giving numbers?(y/n)');
+    while (answer !== 'n' && answer !== 'y') {
+      answer = prompt('Type y or n:');
+    }
+    if (answer === 'n') break;
+  }
+  console.log('The average is: ' + sum / count);
+</script>
