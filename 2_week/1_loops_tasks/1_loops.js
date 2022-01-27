@@ -74,3 +74,72 @@ for (let i = 0; i < 5; i++) {
   count++;
 }
 console.log('The average is: ' + sum / count);
+
+//7. Make a program that ask first one number from the user. After that the program asks: ”Do you want to continue giving numbers?(y/n)”. If user answers y, the program continues to ask another number. If user answers n, program ends. In the end program prints out average of the numbers.
+let sum = 0;
+let count = 0;
+while (true) {
+  let num = Number(prompt('Enter a number: '));
+  sum += num;
+  count++;
+  let answer = prompt('Do you want to continue giving numbers?(y/n)');
+  while (answer !== 'n' && answer !== 'y') {
+    answer = prompt('Type y or n:');
+  }
+  if (answer === 'n') break;
+}
+console.log('The average is: ' + sum / count);
+
+//8. Make a program that asks first how many numbers user wants to give to the program. After that program asks those numbers. In the end program prints out the smallest number that user gave.
+
+let smallest, num;
+
+while (true) {
+  let amount = Number(prompt('How many numbers do you want to enter?'));
+
+  if (amount === 0) {
+    console.log('The smallest number is 0');
+    break;
+  }
+  num = Number(prompt(`Enter the 1 number: `));
+  smallest = num;
+
+  for (let i = 2; i <= amount; i++) {
+    num = Number(prompt(`Enter the ${i} number: `));
+    smallest > num ? (smallest = num) : (smallest = smallest);
+  }
+  console.log('The smallest number is ' + smallest);
+  break;
+}
+
+//9. Make a program that asks ten numbers and in the end prints out two biggest numbers.
+let num = Number(prompt(`Enter the 1 number: `));
+let biggest = num;
+let secondBiggest = num;
+for (let i = 2; i <= 10; i++) {
+  num = Number(prompt(`Enter the ${i} number: `));
+  secondBiggest > num ? (secondBiggest = secondBiggest) : (secondBiggest = num);
+  if (biggest < secondBiggest) {
+    let helper = biggest;
+    biggest = secondBiggest;
+    secondBiggest = helper;
+  }
+}
+console.log(`The biggest numbers are: ${biggest} and ${secondBiggest}.`);
+
+//10. Make a program that asks ten numbers. Program calculates and prints out sum and average, also prints out the smallest and biggest number.
+let num = Number(prompt(`Enter the 1 number: `));
+let biggest = num;
+let smallest = num;
+let sum = num;
+for (let i = 2; i <= 10; i++) {
+  num = Number(prompt(`Enter the ${i} number: `));
+  sum += num;
+  smallest > num ? (smallest = num) : (smallest = smallest);
+  biggest < num ? (biggest = num) : (biggest = biggest);
+}
+console.log(
+  `The biggest number is ${biggest}, the smallest number is ${secondBiggest}. The average is ${
+    sum / 10
+  }`
+);

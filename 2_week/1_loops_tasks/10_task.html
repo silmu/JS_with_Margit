@@ -1,0 +1,18 @@
+<script>
+  //10. Make a program that asks ten numbers. Program calculates and prints out sum and average, also prints out the smallest and biggest number.
+  let num = Number(prompt(`Enter the 1 number: `));
+  let biggest = num;
+  let smallest = num;
+  let sum = num;
+  for (let i = 2; i <= 10; i++) {
+    num = Number(prompt(`Enter the ${i} number: `));
+    sum += num;
+    smallest > num ? (smallest = num) : (smallest = smallest);
+    biggest < num ? (biggest = num) : (biggest = biggest);
+  }
+  console.log(
+    `The biggest number is ${biggest}, the smallest number is ${smallest}. The average is ${
+      sum / 10
+    }`
+  );
+</script>

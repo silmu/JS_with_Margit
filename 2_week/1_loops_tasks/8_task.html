@@ -1,0 +1,23 @@
+<script>
+  //8. Make a program that asks first how many numbers user wants to give to the program. After that program asks those numbers. In the end program prints out the smallest number that user gave.
+
+  let smallest, num;
+
+  while (true) {
+    let amount = Number(prompt('How many numbers do you want to enter?'));
+
+    if (amount === 0) {
+      console.log('The smallest number is 0');
+      break;
+    }
+    num = Number(prompt(`Enter the 1 number: `));
+    smallest = num;
+
+    for (let i = 2; i <= amount; i++) {
+      num = Number(prompt(`Enter the ${i} number: `));
+      smallest > num ? (smallest = num) : (smallest = smallest);
+    }
+    console.log('The smallest number is ' + smallest);
+    break;
+  }
+</script>

@@ -1,0 +1,18 @@
+<script>
+  //9. Make a program that asks ten numbers and in the end prints out two biggest numbers.
+  let num = Number(prompt(`Enter the 1 number: `));
+  let biggest = num;
+  let secondBiggest = num;
+  for (let i = 2; i <= 10; i++) {
+    num = Number(prompt(`Enter the ${i} number: `));
+    secondBiggest > num
+      ? (secondBiggest = secondBiggest)
+      : (secondBiggest = num);
+    if (biggest < secondBiggest) {
+      let helper = biggest;
+      biggest = secondBiggest;
+      secondBiggest = helper;
+    }
+  }
+  console.log(`The biggest numbers are: ${biggest} and ${secondBiggest}.`);
+</script>
