@@ -31,9 +31,9 @@ while (i <= 100) {
 
 //3. Make a program that asks repeatedly from the user the distance (km) and time (h) and calculates average speed. The program ends when user gives 0 for the distance. (After getting 0, the program does not ask anything from the user.)
 while (true) {
-  let distance = prompt('Enter distance in km (Enter 0 to quit):');
+  let distance = Number(prompt('Enter distance in km (Enter 0 to quit):'));
   if (distance == 0) break;
-  let time = prompt('Enter time in h:');
+  let time = Number(prompt('Enter time in h:'));
   console.log('Average speed is ' + distance / time);
 }
 

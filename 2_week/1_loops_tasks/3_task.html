@@ -1,7 +1,8 @@
 <script>
-  while (distance != 0) {
-    let distance = prompt('Enter distance in km (Enter 0 to quit):');
-    let time = prompt('Enter time in h:');
+  while (true) {
+    let distance = Number(prompt('Enter distance in km (Enter 0 to quit):'));
+    if (distance == 0) break;
+    let time = Number(prompt('Enter time in h:'));
     console.log('Average speed is ' + distance / time);
   }
 </script>
