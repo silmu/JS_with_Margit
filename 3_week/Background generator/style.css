@@ -52,8 +52,8 @@ body {
   text-shadow: none;
 }
 .box {
+  max-width: 620px;
   text-align: right;
-  max-width: 616px;
 }
 .box button {
   display: inline-block;
