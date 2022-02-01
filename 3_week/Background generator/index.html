@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <title>Background generator</title>
+  </head>
+  <body>
+    <main class="container">
+      <h1>Gradient background generator</h1>
+      <form>
+        <h2>Colors</h2>
+        <div>
+          <input class="color1" type="color" name="color1" value="#ff0000" />
+          <input class="color2" type="color" name="color2" value="#fff700" />
+        </div>
+        <h2>Direction</h2>
+        <div>
+          <div>
+            <label for="bottom">To bottom</label>
+            <input
+              class="direction"
+              type="radio"
+              value="to bottom"
+              name="direction"
+              id="bottom"
+            />
+          </div>
+          <div>
+            <label for="top">To top</label>
+            <input
+              class="direction"
+              type="radio"
+              value="to top"
+              name="direction"
+              id="top"
+            />
+          </div>
+          <div>
+            <label for="right">To right</label>
+            <input
+              class="direction"
+              type="radio"
+              value="to right"
+              name="direction"
+              id="right"
+            />
+          </div>
+          <div>
+            <label for="left">To left</label>
+            <input
+              class="direction"
+              type="radio"
+              value="to left"
+              name="direction"
+              id="left"
+            />
+          </div>
+        </div>
+      </form>
+      <script src="script.js"></script>
+    </main>
+  </body>
+</html>

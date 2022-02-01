@@ -1,0 +1,8 @@
+body {
+  background-image: linear-gradient(to top, red, yellow);
+  background-repeat: no-repeat;
+  height: 100vh;
+  font-family: 'Roboto', sans-serif;
+  text-shadow: 1px 1px 3px rgba(58, 9, 122, 0.644);
+  color: white;
+}
