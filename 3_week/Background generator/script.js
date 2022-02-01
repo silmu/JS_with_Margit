@@ -26,7 +26,23 @@ const setGradient = () => {
   console.log(
     `linear-gradient(${selectedValue}, ${color1.value}, ${color2.value})`
   );
-  answer.textContent = `background-image{ linear-gradient(${selectedValue}, ${color1.value}, ${color2.value}) }`;
+  answer.textContent = `background-image: linear-gradient(${selectedValue}, ${color1.value}, ${color2.value});`;
 };
 //On change setGradient is triggered
 addEventListener('change', setGradient);
+
+//Copy to keyboard function
+function copyToKeyboard() {
+  /* Get the text field */
+  var copyText = document.getElementById('answer').innerText;
+  console.log(copyText);
+
+  navigator.clipboard.writeText(copyText).then(
+    function () {
+      console.log('clipboard successfully set');
+    },
+    function () {
+      console.log('clipboard write failed');
+    }
+  );
+}
