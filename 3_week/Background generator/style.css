@@ -6,11 +6,48 @@ body {
   text-shadow: 1px 1px 3px rgba(58, 9, 122, 0.644);
   color: white;
 }
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+.color1,
+.color2 {
+  /*color input areas*/
+  display: inline-block;
+  height: 100px;
+  width: 200px;
+  padding: 0px;
+  margin: 5px;
+  background-color: transparent;
+  border-style: none;
+}
+.circle {
+  /*circles around the arrows*/
+  display: inline-block; /*orders circles with arrows horizontally*/
+  margin-right: 10px;
+}
+.arrow {
+  /*arrows inside of circles */
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  border: 2px solid white;
+  text-align: center;
+  text-shadow: none;
+  line-height: 30px;
+  border-radius: 50%;
+}
+.direction {
+  display: none; /*radio buttons invisibility*/
+}
 #answer {
   display: inline-block;
   color: white;
-  background-color: darkblue;
+  background-color: rgba(0, 0, 0, 0.13);
+  border-left: 4px solid black;
   padding: 30px;
   font-family: monospace;
   font-size: larger;
+  text-shadow: none;
 }

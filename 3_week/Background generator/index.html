@@ -17,53 +17,67 @@
     <main class="container">
       <h1>Gradient background generator</h1>
       <form>
+        <!--Colors-->
         <h2>Colors</h2>
-        <div>
-          <input class="color1" type="color" name="color1" value="#ff0000" />
-          <input class="color2" type="color" name="color2" value="#fff700" />
+        <div class="colors">
+          <input class="color1" type="color" name="color1" value="#fff700" />
+          <input class="color2" type="color" name="color2" value="#ff0000" />
         </div>
+        <!--Direction-->
         <h2>Direction</h2>
         <div>
-          <div>
-            <label for="bottom">To bottom</label>
-            <input
-              class="direction"
-              type="radio"
-              value="to bottom"
-              name="direction"
-              id="bottom"
-              checked
-            />
+          <!--Bottom-->
+          <div class="circle">
+            <label class="arrow" for="bottom"
+              >&darr;
+              <input
+                class="direction"
+                type="radio"
+                value="to bottom"
+                name="direction"
+                id="bottom"
+                checked
+              />
+            </label>
           </div>
-          <div>
-            <label for="top">To top</label>
-            <input
-              class="direction"
-              type="radio"
-              value="to top"
-              name="direction"
-              id="top"
-            />
+          <!--Top-->
+          <div class="circle">
+            <label class="arrow" for="top"
+              >&uarr;
+              <input
+                class="direction"
+                type="radio"
+                value="to top"
+                name="direction"
+                id="top"
+              />
+            </label>
           </div>
-          <div>
-            <label for="right">To right</label>
-            <input
-              class="direction"
-              type="radio"
-              value="to right"
-              name="direction"
-              id="right"
-            />
+          <!--Right-->
+          <div class="circle">
+            <label class="arrow" for="right"
+              >&rarr;
+              <input
+                class="direction"
+                type="radio"
+                value="to right"
+                name="direction"
+                id="right"
+              />
+            </label>
           </div>
-          <div>
-            <label for="left">To left</label>
-            <input
-              class="direction"
-              type="radio"
-              value="to left"
-              name="direction"
-              id="left"
-            />
+          <!--Left-->
+          <div class="circle">
+            <label class="arrow" for="left"
+              >&larr;
+              <input
+                class="direction"
+                type="radio"
+                value="to left"
+                name="direction"
+                id="left"
+              />
+            </label>
           </div>
         </div>
       </form>
