@@ -26,7 +26,7 @@ const setGradient = () => {
   console.log(
     `linear-gradient(${selectedValue}, ${color1.value}, ${color2.value})`
   );
-  answer.textContent = `background-image{ linear-gradient(${selectedValue}, ${color1.value}, ${color2.value})}`;
+  answer.textContent = `background-image{ linear-gradient(${selectedValue}, ${color1.value}, ${color2.value}) }`;
 };
 //On change setGradient is triggered
 addEventListener('change', setGradient);
