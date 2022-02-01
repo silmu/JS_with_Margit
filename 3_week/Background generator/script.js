@@ -5,6 +5,8 @@ let color2 = document.querySelector('.color2');
 
 let direction = document.querySelectorAll('input[name="direction"]');
 
+let answer = document.querySelector('#answer');
+
 const setGradient = () => {
   console.log(color1.value);
   console.log(color2.value);
@@ -18,22 +20,13 @@ const setGradient = () => {
   }
   console.log(selectedValue);
 
-  //   for (let i = 0; i < direction.length; i++) {
-  //     if (direction[i].checked) {
-  //       console.log(direction[i].checked);
-  //       direction = direction[i].value;
-  //       console.log(direction);
-  //     } else {
-  //       console.log('Error.');
-  //     }
-  //   }
-
   document.body.style.backgroundImage =
     //'linear-gradient(' + color1.value + ',' + color2.value + ')';
     `linear-gradient(${selectedValue}, ${color1.value}, ${color2.value})`;
   console.log(
     `linear-gradient(${selectedValue}, ${color1.value}, ${color2.value})`
   );
+  answer.textContent = `background-image{ linear-gradient(${selectedValue}, ${color1.value}, ${color2.value})}`;
 };
 //On change setGradient is triggered
 addEventListener('change', setGradient);

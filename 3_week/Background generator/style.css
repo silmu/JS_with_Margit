@@ -6,3 +6,11 @@ body {
   text-shadow: 1px 1px 3px rgba(58, 9, 122, 0.644);
   color: white;
 }
+#answer {
+  display: inline-block;
+  color: white;
+  background-color: darkblue;
+  padding: 30px;
+  font-family: monospace;
+  font-size: larger;
+}
