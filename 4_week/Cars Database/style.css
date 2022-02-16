@@ -18,9 +18,14 @@ body {
 }
 /* Input */
 .input_and_table {
+  display: flex;
+  justify-content: space-between;
   background-color: white;
   padding: 2em;
   margin: 20px 0px;
+}
+.input_form {
+  min-width: fit-content;
 }
 input {
   margin: 1em;
@@ -34,12 +39,16 @@ button {
   padding: 1em 2em;
   margin: 0.5em 0;
 }
+button:active {
+  background-color: cyan;
+  border-color: cyan;
+}
 
-/* Table */
+/* Cars database */
 .cars_table {
-  display: inline-block;
-  border: 1px solid gray;
+  display: flex;
   border-collapse: collapse;
+  background-color: white;
 }
 .cars_table th {
   border: 1px solid #31a2cf;

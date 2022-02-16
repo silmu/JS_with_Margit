@@ -7,7 +7,16 @@ class Car {
     this.price = price;
     this.color = color;
   }
+  discount() {
+    const price = this.price;
+    let discount = '';
+    if (price < 5000) discount = '10%';
+    else if (price > 5000 && price < 20000) discount = '15%';
+    else if (price > 20000) discount = '25%';
+    return discount;
+  }
 }
+
 //Table
 const table = document.querySelector('.cars_table');
 //Array for table of cars
@@ -16,7 +25,8 @@ const arrCars = [];
 // Adding values to the array
 const btn = document.querySelector('#btn_add');
 
-btn.addEventListener('click', () => {
+btn.addEventListener('click', (e) => {
+  e.preventDefault();
   // Reading values from input form
   const license = document.querySelector('#license').value;
   const maker = document.querySelector('#maker').value;
@@ -27,7 +37,7 @@ btn.addEventListener('click', () => {
 
   //Creating new Car object
   const car = new Car(license, maker, model, owner, price, color);
-
+  //Creating a table row
   let row = table.insertRow(1);
   row.insertCell(0).textContent = car.license;
   row.insertCell(1).textContent = car.maker;
@@ -36,7 +46,26 @@ btn.addEventListener('click', () => {
   row.insertCell(4).textContent = car.price;
   row.insertCell(5).textContent = car.color;
 
-  console.log(car);
   arrCars.push(car);
-  console.table(arrCars);
+});
+
+//Search
+const searched = document.querySelector('#searched');
+const search = document.querySelector('#search');
+const output = document.querySelector('.result');
+
+search.addEventListener('click', () => {
+  console.log(arrCars);
+  let result = arrCars.filter((car) => {
+    if (car.license === searched.value) {
+      output.textContent = `License: ${car.license}, maker: ${
+        car.maker
+      }, model: ${car.model}, owner: ${car.owner}, price: ${
+        car.price
+      }, color: ${car.color}, discount: ${car.discount()}`;
+      return car;
+    }
+  });
+  result.length === 0 ? (output.textContent = 'Not found') : '';
+  console.log(result);
 });

@@ -16,16 +16,16 @@
           <label for="searched">License number</label>
           <input type="text" id="searched" />
         </div>
-        <button type="submit">Search</button>
-        <p>Please enter car first</p>
+        <button type="submit" id="search">Search</button>
+        <p class="result">Please enter car first</p>
       </div>
       <div class="input_and_table">
         <!--Insert car data-->
-        <div class="input_form">
+        <form class="input_form">
           <h1>Insert car data</h1>
-          <div class="forem_group">
+          <div class="form_group">
             <label for="license">License number</label>
-            <input type="text" id="license" />
+            <input type="text" id="license" required="required" />
           </div>
           <div class="input_form">
             <label for="maker">Car maker</label>
@@ -49,19 +49,21 @@
           </div>
           <button type="submit" id="btn_add">Add car</button>
           <button type="reset">Reset</button>
-        </div>
+        </form>
         <!--Cars database table-->
-        <h1>Cars database</h1>
-        <table class="cars_table">
-          <tr>
-            <th>License</th>
-            <th>Maker</th>
-            <th>Model</th>
-            <th>Owner</th>
-            <th>Price</th>
-            <th>Color</th>
-          </tr>
-        </table>
+        <div>
+          <h1>Cars database</h1>
+          <table class="cars_table">
+            <tr>
+              <th>License</th>
+              <th>Maker</th>
+              <th>Model</th>
+              <th>Owner</th>
+              <th>Price</th>
+              <th>Color</th>
+            </tr>
+          </table>
+        </div>
         <!-- <section class="output container">
         <div class="result"></div> -->
       </div>
