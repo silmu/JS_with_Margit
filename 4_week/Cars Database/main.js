@@ -11,7 +11,7 @@ class Car {
     const price = this.price;
     let discount = '';
     if (price < 5000) discount = '10%';
-    else if (price > 5000 && price < 20000) discount = '15%';
+    else if (price >= 5000 && price <= 20000) discount = '15%';
     else if (price > 20000) discount = '25%';
     return discount;
   }
